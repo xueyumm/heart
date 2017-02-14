@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>心跳</title>
+    <style>
+    body{
+        background: #E07E7E;
+    }
+    .heart{
+        width: 500px;
+        height: 600px;
+        margin:100px auto;
+        position:relative;
+    }
+    .drop{
+        animation:beat 1s ease 0s infinite normal;
+    }
+    .left{
+        width: 250px;
+        height: 250px;
+        background: red;
+        position: absolute;
+        left:30px;
+        border-radius: 220px;
+        /*border-radius: 120% 117% 0 125%;*/
+    }
+    .right{
+        width: 250px;
+        height: 250px;
+        background: red;
+        position: absolute;
+        right:30px;
+        z-index: 2;
+        border-radius: 220px;
+        /*border-radius: 117% 120% 125% 0;*/
+    }
+    
+    .down{
+        width: 250px;
+        height: 250px;
+        background: red;
+        position: absolute;
+        top: 95px;
+        left: 125px;
+        /*border-radius:95% 10% 13px 10%;*/
+        transform:rotate(45deg);  
+    }
+    .text{
+        width: 500px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        color: #fff;
+        font-weight: 700px;
+        font-size: 24px;
+        position: absolute;
+        top: 130px;
+        z-index: 5;
+        animation:love 1s ease 0s infinite normal;
+    }
+    @keyframes beat{
+        0%{
+            transform:scale(1) rotate(225deg);
+            box-shadow: 0 0 40px red;
+        }
+        50%{
+            transform:scale(1.1) rotate(225deg);
+            box-shadow: 0 0 40px red;
+        }
+        100%{
+            transform:scale(1) rotate(225deg);
+            box-shadow: 0 0 40px red;
+        }
+    }
+    @keyframes love{
+        0%{
+            transform:scale(1);
+        }
+        50%{
+            transform:scale(1.3);
+        }
+        100%{
+            transform:scale(1);
+        }
+    }
+    </style>
+</head>
+<body>
+<div class="heart">
+  <div class="drop left"></div>
+  <div class="drop right"></div>
+  <div class="drop down"></div>
+  <div class="drop text">Forgotten&nbsp;&nbsp;heartbeat&nbsp;！<br>薛羽</div>  
+</div>
+</body>
+</html>
